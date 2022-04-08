@@ -1,10 +1,12 @@
-# Hello from Faith's page :-)
+# cse 15 lab
+## section b00 - onat gungor
 made by faith rivera !
 ---
-
-this is very cool :-0 here is some **bold text**
+welcome to my github page :-) 
 
 ![Image](https://images.unsplash.com/photo-1521170813716-0b3f42fcfb65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)
+![Alt Text](https://thumbs.gfycat.com/DefensiveZigzagBergerpicard-size_restricted.gif)
+
 ---
 **the correct ranking of the ucsd colleges:**
 1. sixth
