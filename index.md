@@ -4,8 +4,9 @@ made by faith rivera !
 ---
 welcome to my github page :-) 
 
-![Image](https://images.unsplash.com/photo-1521170813716-0b3f42fcfb65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)
-![Alt Text](https://thumbs.gfycat.com/DefensiveZigzagBergerpicard-size_restricted.gif)
+<p align="center">
+  <img src="https://64.media.tumblr.com/b3f44ce3e9521a07684c8773f115b093/22f8132deea1f121-50/s500x750/11a71ce1c6291344f78a7db4f90cdc75ce9bbe12.gifv" width="4800">
+</p>
 
 ---
 **the correct ranking of the ucsd colleges:**
