@@ -14,3 +14,7 @@ this is very cool :-0 here is some **bold text**
 5. warren
 6. revelle
 7. erc
+
+---
+**links to other pages**
+[Lab Report 1](lab-report-1-week-2.html)
