@@ -17,4 +17,4 @@ this is very cool :-0 here is some **bold text**
 
 ---
 **links to other pages**
-[Lab Report 1](lab-report-1-week-2.html)
+[Lab Report 1](lab-report-1-week-2.html) 
