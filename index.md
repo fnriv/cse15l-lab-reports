@@ -18,5 +18,6 @@ this is very cool :-0 here is some **bold text**
 ---
 **links to other pages**
 [Lab Report 1](lab-report-1-week-2.html) 
-[Lab Report 1 FROM ANYWHERE](https://<your-username>.github.io/<your-lab-reports-repo>/lab-report-1-week-2.html)
+   
+[Lab Report 1 FROM ANYWHERE](https://fnriv.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
 
