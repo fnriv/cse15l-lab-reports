@@ -13,7 +13,7 @@ In fancy terms- this step-by-step tutorial will teach you how to **_log into a c
 ---
 
 ### Step 1: Installing VScode
-
+![step 1](step1.png)
 
 ### Step 2: Remotely Connecting
 
