@@ -10,6 +10,18 @@ For most beginners, we are often used to coding on our own personal computers an
 
 In fancy terms- this step-by-step tutorial will teach you how to **_log into a course-specific account_** - more specifically the `ieng 6` server. That way, you can easily use your computer to log in to the server using a **secure socket shell**.
 
+---
+
+### Step 1: Installing VScode
 
 
-links for other pages 
+### Step 2: Remotely Connecting
+
+### Step 3: Trying Some Commands
+
+### Step 4: Moving Files with scp
+
+### Step 5: Setting an SSH Key
+
+### Step 6: Optimizing Remote Running
+
