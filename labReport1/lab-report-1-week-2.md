@@ -13,7 +13,7 @@ In fancy terms- this step-by-step tutorial will teach you how to **_log into a c
 ---
 
 ### Step 1: Installing VScode
-![step 1](images/step1.png)
+![step 1](labReport1/step1.png)
 
 Visual Studio Code (VSCode) allows us to connect to the `ieng6` server remotely from our computer.  
 To install, visit the Visual Studio Code website https://code.visualstudio.com/ and follow the instructions on the website to download the proper software for your device. Make sure you download the correct version for your operating system (ie: OSX, or Windows).
