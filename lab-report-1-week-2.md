@@ -27,7 +27,8 @@ Before connecting: complete the following instructions if you are on **Windows s
 1. Install the [OpenSSH program](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). 
     -  This lets you connect your computer to other machines with the account.
 
-Now, _all_ users (including non-Windows users) should find their course-specific account for CSE 15L at UCSD's account lookup: https://sdacs.ucsd.edu/~icc/index.php
+Now, _all_ users (including non-Windows users) should find their course-specific account for CSE 15L at UCSD's account lookup: https://sdacs.ucsd.edu/~icc/index.php 
+
 ### Step 3: Trying Some Commands
 
 ### Step 4: Moving Files with scp
