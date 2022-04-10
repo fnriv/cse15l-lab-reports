@@ -12,15 +12,13 @@ In fancy terms- this step-by-step tutorial will teach you how to **_log into a c
 
 ---
 
-### Step 1: Installing VScode
-![step 1](labReport1/step1.png)
+### Stage 1: Installing VScode
+![step 1](step1.png)
 
 Visual Studio Code (VSCode) allows us to connect to the `ieng6` server remotely from our computer.  
 To install, visit the Visual Studio Code website https://code.visualstudio.com/ and follow the instructions on the website to download the proper software for your device. Make sure you download the correct version for your operating system (ie: OSX, or Windows).
 
-### Step 2: Remotely Connecting
-![step 2](image)
-
+### Stage 2: Remotely Connecting
 Remotely connecting on our personal machine over the internet allows us to use a **server or course-specific account**.  
 Before connecting: complete the following instructions if you are on **Windows software:**
 
@@ -44,13 +42,30 @@ _(The following steps are based on VSCode's_ [_Connect to a remote host_](https:
     Are you sure you want to continue connecting
     (yes/no/[fingerprint])?
     ```
-    Type `yes` to confirm and press enter- then enter your password. 
+    Type `yes` to confirm and press enter- then enter your password. If you successfully log in, you should see a message below the password input like this:
+    ```
+    Last login: Sun Jan  2 14:03:05 2022 from
+    107-217-10-235.lightspeed.sndgca.sbcglobal.net
 
-### Step 3: Trying Some Commands
+    quota: No filesystem specified.
+
+    Hello cs15lsp22zz, you are currently logged into
+    ieng6-203.ucsd.edu
+
+
+    You are using 0% CPU on this system
+    ```
+
+Sometimes, your password might be incorrect (you can see that I had this issue many times below). You'll have a maximum of 4 tries before you are logged out and must complete Step 2 of this stage again. If you continue to have issues, check if your password is correct or change it [here](https://sdacs.ucsd.edu/~icc/index.php).
+
+![step 2](step2.png)
+
+
+### Stage 3: Trying Some Commands
 hi
-### Step 4: Moving Files with scp
+### Stage 4: Moving Files with scp
 
-### Step 5: Setting an SSH Key
+### Stage 5: Setting an SSH Key
 
-### Step 6: Optimizing Remote Running
+### Stage 6: Optimizing Remote Running
 
