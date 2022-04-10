@@ -14,7 +14,7 @@
 ---
     
 **my lab reports**
-1. Week 2, [Lab Report 1](https://fnriv.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+1. Week 2, [Lab Report 1](https://github.com/fnriv/cse15l-lab-reports/blob/44c7caa989b7ffa47fcd62c3a549065961d11073/labReport1/lab-report-1-week-2.md)
 
 ---
 **thank you!**
