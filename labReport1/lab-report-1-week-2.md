@@ -47,7 +47,7 @@ _(The following steps are based on VSCode's_ [_Connect to a remote host_](https:
     Type `yes` to confirm and press enter- then enter your password. 
 
 ### Step 3: Trying Some Commands
-
+hi
 ### Step 4: Moving Files with scp
 
 ### Step 5: Setting an SSH Key
