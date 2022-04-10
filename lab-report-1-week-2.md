@@ -8,7 +8,7 @@
 
 For most beginners, we are often used to coding on our own personal computers and nothing else. But what happens if we want to collaborate with others or get access to code from our university? Oftentimes, we can connect **_remotely_** to a server on our own computer.  
 
-In fancy terms- this step-by-step tutorial will teach you how to **_log into a course-specific account_** - more specifically the `ieng 6` server. That way, you can easily use your computer to log in to the server using a **secure socket shell**.
+In fancy terms- this step-by-step tutorial will teach you how to **_log into a course-specific account_** - more specifically the `ieng 6` server using our CSE 15L account. That way, you can easily use your computer to log in to the server using a **secure socket shell**.
 
 ---
 
@@ -19,7 +19,15 @@ Visual Studio Code allows us to connect to the `ieng6` server remotely from our 
 To install, visit the Visual Studio Code website https://code.visualstudio.com/ and follow the instructions on the website to download the proper software for your device. Make sure you download the correct version for your operating system (ie: OSX, or Windows).
 
 ### Step 2: Remotely Connecting
+![step 2](image)
 
+Remotely connecting on our personal machine over the internet allows us to use a **server or course-specific account**.  
+Before connecting: complete the following instructions if you are on **Windows software:**
+
+1. Install the [OpenSSH program](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). 
+    -  This lets you connect your computer to other machines with the account.
+
+Now, _all_ users (including non-Windows users) should find their course-specific account for CSE 15L at UCSD's account lookup: https://sdacs.ucsd.edu/~icc/index.php
 ### Step 3: Trying Some Commands
 
 ### Step 4: Moving Files with scp
