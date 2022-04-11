@@ -90,6 +90,34 @@ of the other group members’ username. You shouldn't be able to access it becau
 
 ### Stage 4: Moving Files with scp
 
+The commands we experimented with in the previous stage are some ways we can work on our personal and remote computers. But we haven't quite touched an important part of working remotely: **copying files back and forth between the two computers.** We do so between your personal and remote computer using the `scp` command.
+
+We can test it out by creating a file called `WhereAmI.java` with the following code:
+
+```
+class WhereAmI {
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("os.name"));
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(System.getProperty("user.home"));
+        System.out.println(System.getProperty("user.dir"));
+    }
+}
+```
+This code will allow us to see where the code is being run on: **your personal computer** or your **remote client computer**. If you run it on your computer using `javac` and `java` (in a separate terminal to the one we've been using), it'll show you your own computer's software, directory, name, etc.
+
+From here, enter the command `scp WhereAmI.java cs15lsp22zz@ieng6.ucsd.edu:~/` (with the zz being the letters in your account name) and log in with your account and password. If your login is successful, you'll be able to see it in your directory, as well as run `javac` and `java` on your remote computer.
+
+You can see the difference of the java file outputs between my two computers:
+
+**Personal computer output:**
+![Personal computer java](stage4pers.png)
+
+**Remote client computer output:**
+![Remote client computer java](stage4client.png)
+
+My personal computer uses Mac OS X software, while the remote client computer uses Linux software- they're two different locations on one machine! How cool :D
+
 ### Stage 5: Setting an SSH Key
 
 ### Stage 6: Optimizing Remote Running
