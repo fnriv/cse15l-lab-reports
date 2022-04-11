@@ -54,15 +54,40 @@ _(The following steps are based on VSCode's_ [_Connect to a remote host_](https:
 
 
     You are using 0% CPU on this system
+
+    Cluster Status
+    Hostname     Time    #Users  Load  Averages
+    ieng6-201   23:25:01   0  0.08,  0.17,  0.11
+    ieng6-202   23:25:01   1  0.09,  0.15,  0.11
+    ieng6-203   23:25:01   1  0.08,  0.15,  0.11
+
+    Sun Jan 02, 2022 11:28pm - Prepping cs15lsp22
     ```
 
-Sometimes, your password might be incorrect (you can see that I had this issue many times below). You'll have a maximum of 4 tries before you are logged out and must complete Step 2 of this stage again. If you continue to have issues, check if your password is correct or change it [here](https://sdacs.ucsd.edu/~icc/index.php).
+Sometimes, your password might be incorrect (you can see that I had this issue many times below). You'll have a maximum of 4 tries before you are logged out and must complete Step 2 of this stage again. If you continue to have issues, check if your password is correct or change it [here](https://sdacs.ucsd.edu/~icc/index.php). It's totally okay if it doesn't work the first few times- as you can see in my photo, it took _a lot_ of tries!
 
 ![step 2](step2.png)
 
-
+After you recieve the correct message, you are logged in as a client! 
 ### Stage 3: Trying Some Commands
-hi
+
+Once you're logged into the server, you can use several commands on your remote computer and on your personal computer. Some of these commands can let you transfer files between the two!
+
+Some commands to experiment with:
+- `cd~`
+- `cd` (change directory)
+- `ls -a` (list all files)
+- `ls -lat` (list all files by date- a triple command!)
+- `ls <directory>` where `<directory>` is
+`/home/linux/ieng6/cs15lsp22/cs15lsp22abc,` where the `abc` is one
+of the other group members’ username. You shouldn't be able to access it because you're not logged in! See the picture below for reference:
+
+  ![step 3](step3.png)
+
+- `cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/` (copies a file)
+- `cat /home/linux/ieng6/cs15lsp22/public/hello.txt` (view or create a file)
+- `rm` (remove)
+
 ### Stage 4: Moving Files with scp
 
 ### Stage 5: Setting an SSH Key
