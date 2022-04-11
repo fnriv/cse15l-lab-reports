@@ -119,6 +119,55 @@ You can see the difference of the java file outputs between my two computers:
 My personal computer uses Mac OS X software, while the remote client computer uses Linux software- they're two different locations on one machine! How cool :D
 
 ### Stage 5: Setting an SSH Key
+It can be annoying to enter your password each time you need to log in. Luckily there's an easy solution to this: setting up an **ssh key** to quickly connect to a remote client computer. 
+
+To do so, you can use the `ssh-keygen` command to set up two files in your system: a private key (in a file `id_rsa`) and a public key (in a file `id_rsa.pub`). Once you are done setting it up, you'll get a confirmation message similar to this:
+
+    ```
+    Your identification has been saved in
+    /Users/<user-name>/.ssh/id_rsa.
+    Your public key has been saved in
+    /Users/<user-name>/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0
+    <user-name>@<system>.local
+    The key's randomart image is:
+    +---[RSA 3072]----+
+    |                 |
+    |       . . + .   |
+    |      . . B o .  |
+    |     . . B * +.. |
+    |      o S = *.B. |
+    |       = = O.*.*+|
+    |        + * *.BE+|
+    |           +.+.o |
+    |             ..  |
+    +----[SHA256]-----+
+    If you’re on Windows, follow the extra ssh-add steps here:
+    https://docs.microsoft.com/en-us/windows-server/administration/openssh/openss
+    h_keymanagement#user-key-generation
+    This created two new files on your system; the private key (in a file id_rsa) and the
+    public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.
+    Now we need to copy the public (not the private) key to the .ssh directory of your user
+    account on the server.
+    $ ssh cs15lsp22zz@ieng6.ucsd.edu
+    <Enter Password>
+    # now on server
+    $ mkdir .ssh
+    ```
+
+After that, you can copy your public key so that you're all set up! This will let you use the `ssh` and `scp` key without using your password, just as I have below:
+
+![stage 5](stage5.png)
 
 ### Stage 6: Optimizing Remote Running
+Now we can do commands **_really_** fast!! With our `ssh` key, we can now do multiple commands at once without having to worry about our password. To do so, enter `ssh cs15lsp22zz@ieng6.ucsd.edu`; and after insert your commands each separated by a `;` in quotations. For instance, I **searched up my files list, compiled my `WhereAmI.java` file and ran it**:
+
+![stage 6](stage6.png)
+
+If you want a challenge, use your up arrows and tab key to try to minimize your keystrokes to be under 10!
+
+
+---
+That wraps up our basic tutorial! I encourage you to continue to experiment and see how fast you can work with these files. Happy ssh-ing!
 
