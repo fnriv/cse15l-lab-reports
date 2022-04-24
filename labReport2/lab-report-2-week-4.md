@@ -26,9 +26,10 @@ Then MarkdownParse.java should print the following when run:
 ```
 [https://something.com, some-thing.html]
 ```
+
 ---
 
-### example one: making sure [] and () are connected for link format
+## example one: making sure [] and () are connected for link format
 When initially running the code on the file [**`testFR_filePt3.md`**](https://github.com/fnriv/markdown-parser/blob/main/testFR_filePt3.md), the output for the file was `[coolmath, https://twitter.com/?lang=en]` when it should have been `[https://www.coolmathgames.com/, https://twitter.com/?lang=en]`.
 
 This incorrect output, or **_symptom_**, was due to the java file only looking for the symbols "[", "]", "(", and ")". In this case, the **_failure-inducing input_** was that when brackets or parentheses were outside of the actual link format, it would recognize it to be part of the link syntax and proceed to find the nearest pair of parentheses.
@@ -46,7 +47,7 @@ After making these changes, the output was correct and the symptom was gone, mea
 
 ---
 
-### example two: fixing infinite loops
+## example two: fixing infinite loops
 After fixing this bug, I proceeded to run `MarkdownParse.java` on the [**`testFR_fileLastLine.md`**](https://github.com/fnriv/markdown-parser/blob/main/testFR_fileLastLine.md). This file has the **failure-inducing input** of having an extra blank line at the end of the Markdown file, which means the java program will enter an infinite loop looking for the next open bracket. This resulted in the following **symptom** output:
 
 ```
@@ -63,3 +64,6 @@ To fix this bug, I made the code store the indexes of the 3 strings into variabl
 This ensures the MarkdownParse method will work even if the link isn't the last text in the file.
 
 ---
+
+## example 3: image links
+
