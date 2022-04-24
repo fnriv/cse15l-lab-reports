@@ -66,4 +66,16 @@ This ensures the MarkdownParse method will work even if the link isn't the last 
 ---
 
 ## example 3: image links
+In this version of `MarkdownParse.java`, we were instructed to _not_ include image links in the output list. Thus, I realized that when I ran my updated version of `MarkdownParse.java` on the Markdown file [**`testFR_file4.md`**](https://github.com/fnriv/markdown-parser/blob/main/testFR_file4.md), the **failure-inducing input** (the image link in Markdown format) resulted in the following bug symptom output:
 
+```
+[https://media.istockphoto.com/photos/carboard-box-wclippping-path-picture-id157318026?k=20&m=157318026&s=612x612&w=0&h=mTVCRfqtS2zKtbfKu_duQy5mvegvJqs8Z7mgQlZ06ck=]
+```
+
+when it should only be `[]`.
+
+As a result, I changed the code to not add links if the open bracket of the link had a `!` before it (by checking the index before if there was a character before). This is evidenced by the code change diff below:
+
+![example 3 code change diff](ex3.png)
+
+After making these changes, the code was fixed: all possible bugs were squished and fixed. This was affirmed by multiple tests with other files, which can be seen [here](https://github.com/fnriv/markdown-parser/blob/main/MarkdownParseTest.java)!
