@@ -15,7 +15,7 @@ Let's face it: bugs in code are inevitable. We often must recheck our work and f
 
 The following blog post will show examples of analyzing code and its failure-inducing inputs to find bugs and fix them. 
 
-All fixes were done on a java file called **MarkdownParse.java** (original unedited code [here](https://github.com/nidhidhamnani/markdown-parser/blob/main/MarkdownParse.java)), whose purpose is to print a list of all the links in a markdown file that are formatted with Markdown link syntax. For instance, when we have this Markdown file code:
+All fixes were done on a java file called [**`MarkdownParse.java`**](https://github.com/nidhidhamnani/markdown-parser/blob/main/MarkdownParse.java), whose purpose is to print a list of all the links in a markdown file that are formatted with Markdown link syntax. For instance, when we have this Markdown file code:
 
 ```
 # Title
@@ -27,7 +27,7 @@ Then MarkdownParse.java should print the following when run:
 [https://something.com, some-thing.html]
 ```
 ### example one: making sure [] and () are connected for link format
-When initially running the code on the file [testFR_filePt3.md](https://github.com/fnriv/markdown-parser/blob/main/testFR_filePt3.md), the output for the file was `[coolmath, https://twitter.com/?lang=en]` when it should have been `[https://www.coolmathgames.com/, https://twitter.com/?lang=en]`.
+When initially running the code on the file [`testFR_filePt3.md`](https://github.com/fnriv/markdown-parser/blob/main/testFR_filePt3.md), the output for the file was `[coolmath, https://twitter.com/?lang=en]` when it should have been `[https://www.coolmathgames.com/, https://twitter.com/?lang=en]`.
 
 This incorrect output, or **_symptom_**, was due to the java file only looking for the symbols "[", "]", "(", and ")". In this case, the **_failure-inducing input_** was that when brackets or parentheses were outside of the actual link format, it would recognize it to be part of the link syntax and proceed to find the nearest pair of parentheses.
 
@@ -42,3 +42,22 @@ I fix my indexing for `closeBracketAndOpenParentheses` so that the print statmen
 
 After making these changes, the output was correct and the symptom was gone, meaning that this bug was fixed!
 
+---
+
+### example two: fixing infinite loops
+After fixing this bug, I proceeded to run `MarkdownParse.java` on the [`testFR_fileLastLine.md`](https://github.com/fnriv/markdown-parser/blob/main/testFR_fileLastLine.md). This file has the **failure-inducing input** of having an extra blank line at the end of the Markdown file, which means the java program will enter an infinite loop looking for the next open bracket. This resulted in the following **symptom** output:
+
+```
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.lang.StringLatin1.newString(StringLatin1.java:766)
+        at java.base/java.lang.String.substring(String.java:2708)
+        at MarkdownParse.getLinks(MarkdownParse.java:18)
+        at MarkdownParse.main(MarkdownParse.java:29)
+```
+To fix this bug, I made the code store the indexes of the 3 strings into variables in the loop. Then, if any of the variables had the value of -1, the loop would break. This is shown in the code change diff below.
+
+![example 2 code change diff](ex2.png)
+
+This ensures the MarkdownParse method will work even if the link isn't the last text in the file.
+
+---
