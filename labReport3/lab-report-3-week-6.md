@@ -35,9 +35,15 @@ User cs15lsp22zzz (use your username)
 Refer to the photo below to match:
 ![config file lines](configlines.png)
 
+The first line `Host` can be changed (from `ieng6` to something else) - this is what the computer uses to recognize where to log into. 
+
 Once you save to the file, you should be able to type the following to log in with your `ssh` key becuase of the specific login domain and username you put in `config`:
 
 `ssh ieng6`
 
 The computer will thus log you in and display a message like below.
 ![configured login to ieng server](configlogin.png)
+
+---
+
+## 2. Set up Github Access from ieng6
