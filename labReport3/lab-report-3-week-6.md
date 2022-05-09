@@ -59,8 +59,40 @@ Since we haven't used Vim yet, we can use the `scp` command to create a key link
 
 Now, when I use the `ls` command, I can see the `~/.ssh/config` file, as well as my public and private key on my `ieng6` user account:
 
-![all 3 files copied to ieng6](iengkeys.png)
+![all 3 files copied to ieng6](ieng6dirkeys.png)
 
 Then, I set up my `ssh` key on GitHub following [this tutorial.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). Once it's set up, you should be able to view your key in your account settings and clicking on **SSH and GPG keys**:
 ![ssh key viewed on github account](githubkeys.png)
 
+We know this works when we can use `git push` on our `ieng6` account:
+
+
+---
+
+## 3: Copy whole directories with `scp -r`
+
+Sometimes we want to transfer entire directories to our remote account, but it would be daunting and time consuming to use the `scp` command on the files one by one. Thus, we cam use the `scp -r` command to do so recursively.
+
+You can use your `ssh` key to easily transfer the contents, as well as this specific syntax so that it will only list the visible files (so not the files hidden in `git`):
+
+```
+⤇ scp -r *.java *.md lib/ ieng6:markdown-parse
+```
+
+The terminal will return something like so:
+![scp -r command on its own](scpronce.png)
+
+After, we can enter our `ieng6` account and use `javac` and `java` to run our tests like so:
+![md tests on ieng6 server](mdtestsonieng6.png)
+
+We can even run our `scp -r`, `javac`, and `java` command on one line! Make sure the `scp -r` command is before your `ieng6` commands- it must be done from your personal computer so you can transfer the files _from_ there. Make sure also to use the `cd` command so you can run your `javac` and `java` commands in the right directory. 
+
+An appropriate one-line command is similar to this:
+```
+scp -r *.java *.md lib/ ieng6:markdown-parse; ssh ieng6 cd markdown-parse;javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java;java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+```
+
+It results in terminal feedback like this!
+![scp java one line command](scponeline.png)
+
+That way, you can compress your commands to one step to occur on one go!
