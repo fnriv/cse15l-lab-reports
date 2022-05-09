@@ -44,6 +44,23 @@ Once you save to the file, you should be able to type the following to log in wi
 The computer will thus log you in and display a message like below.
 ![configured login to ieng server](configlogin.png)
 
+To test if it works, I used the `scp` command on a Markdown file. Below, you can see it was successfuly copied over when I called the `ls` command with my ssh key:
+![using config key for scp](configscp.png)
+
 ---
 
 ## 2. Set up Github Access from ieng6
+
+If we want to `commit` and `push` using `git` on the command line terminal, we have to use some sort of authentication system to push changes. To do so, we can use our `ssh` key to give our `ieng6` computer access to Github.
+
+Since we haven't used Vim yet, we can use the `scp` command to create a key linking to GitHub on our own computer and then copy it to our `ieng6` account. I did so by using `ssh-keygen` to create a key on my personal computer, then adding key information to my `~/.ssh/config` file, then using the `scp` command to transfer it to my `ieng6` account. (As seen below.)
+
+![scp commands for github keys](scpkeys.png)
+
+Now, when I use the `ls` command, I can see the `~/.ssh/config` file, as well as my public and private key on my `ieng6` user account:
+
+![all 3 files copied to ieng6](iengkeys.png)
+
+Then, I set up my `ssh` key on GitHub following [this tutorial.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). Once it's set up, you should be able to view your key in your account settings and clicking on **SSH and GPG keys**:
+![ssh key viewed on github account](githubkeys.png)
+
