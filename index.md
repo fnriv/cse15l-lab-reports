@@ -18,6 +18,7 @@
 2. Week 4, [Lab Report 2](labReport2/lab-report-2-week-4.md)
 3. Week 6, [Lab Report 3](labReport3/lab-report-3-week-6.md)
 4. Week 8, [Lab Report 4](labReport4/lab-report-4-week-8.md)
+
 ---
 **thank you!**
    
