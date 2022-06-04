@@ -21,7 +21,7 @@
 4. Week 10, [Lab Report 5](labReport5/lab-report-5-week-10.md)
 
 ---
-**thank you!**
+**thank you for a wonderful quarter!**
    
 
 
