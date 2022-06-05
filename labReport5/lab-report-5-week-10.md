@@ -13,7 +13,7 @@
 
 We're closing off our labs for CSE 15L with one last way to compare and debug multiple test cases for `MarkdownParse.java`. I will be comparing two tests from the `test-files` directory to compare its output on different implementations of `MarkdownParse.java` on my `ieng6` account.
 
-To do this, I will be using the test files `577.md` and `496.md`. I used `vimdiff` to compare the outputs of the files when run through the different parsers as shown below. I'll break down each test file's outputs, the expected output, and possible bug solutions to produce the correct output.
+To do this, I will be using the test files `496.md` and `577.md`. I used `vimdiff` to compare the outputs of the files when run through the different parsers as shown below. I'll break down each test file's outputs, the expected output, and possible bug solutions to produce the correct output.
 
 ---
 
@@ -57,6 +57,8 @@ This would evaluate if the link is for an image. If it is, it will not add the l
 ---
 
 That concludes my last lab report for the quarter- thank you! 
+
+<3 Faith
 
 <p align="center">
   <img src="https://c.tenor.com/Gzfino8TLQwAAAAC/my-melody-onegai-my-melody.gif" width="2800">
