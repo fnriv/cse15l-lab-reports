@@ -44,4 +44,20 @@ Below is the `vimdiff` file comparison when `577.md` is run through my `Markdown
 _For reference, [here](https://github.com/nidhidhamnani/markdown-parser/blob/c7680904bc390e500c7c98e4789d1410249c2982/test-files/577.md) is the link to `577.md` from the provided repository._
 
 This is what the file looks like compared to the preview version on VSCode:
-![file 496 md preview](mdpreview496.png)
+![file 577 md preview](mdpreview577.png)
+
+Since the link in `577.md` is an image link, it technically should not be recognized as a valid link and should not be added to the array returned by the parser. Thus, my own implementation of `MarkdownParse.java` produces the expected and correct output of an empty array, while the CSE 15L-provided implementation does not. 
+
+I think the CSE 15L code returns the wrong output because it does not check if there is a `!` before the first square bracket. The parser correctly parses all of the text in the parentheses, but does not evaluate if it is an image link. I would need to add code to check if the value of the index of the link string before the saved index for the first open is a `!`. I can add this code to the highlighted part of my code shown below:
+
+![place for code to fix test for 496](cseparse577.png)
+
+This would evaluate if the link is for an image. If it is, it will not add the link to the array returned by the parser, thus fixing the bug in the CSE 15L provided implementation.
+
+---
+
+That concludes my last lab report for the quarter- thank you! 
+
+<p align="center">
+  <img src="https://c.tenor.com/Gzfino8TLQwAAAAC/my-melody-onegai-my-melody.gif" width="2800">
+</p>
